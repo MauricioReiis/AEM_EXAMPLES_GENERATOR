@@ -5,12 +5,12 @@ const Exemplo = ({ multifieldOne, multifieldTwo }) => {
   return (
     <>
       {multifieldOne.map((item) => (
-        <h1 key={item}>{item}</h1>
+        <h1 key={item}>Altere:{item}</h1>
       ))}
       {multifieldTwo.map(({ textOne, textTwo }, index) => (
         <div key={index}>
-          <h3>{textOne}</h3>
-          <h3>{textTwo}</h3>
+          <h3>Altere:{textOne}</h3>
+          <h3>Altere:{textTwo}</h3>
         </div>
       ))}
     </>
@@ -20,12 +20,6 @@ const Exemplo = ({ multifieldOne, multifieldTwo }) => {
 Exemplo.defaultProps = {
   multifieldOne: ["Eu sou um texto"],
   multifieldTwo: [
-    {
-      textOne: "Eu sou o texto 1",
-      textTwo: "Eu sou o texto 2",
-    },
-  ],
-  certificates: [
     {
       textOne: "Eu sou o texto 1",
       textTwo: "Eu sou o texto 2",
